@@ -8,15 +8,18 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="shortcut icon" href="assets/img/favicon.png">
 	<!-- =================== STYLE =================== -->
 	<link rel="stylesheet" type="text/css" href="assets/css/slick.min.css"/>
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="assets/css/bootstrap-grid.css">
 	<link href="../../use.fontawesome.com/releases/v5.10.1/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/jquery.fancybox.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/stat.css"/>
 </head>
 
 <body id="dance-page" class="dance-page">
@@ -405,15 +408,53 @@
 	
 
 	<!-- ============= S-DANCE-PRICE END ============= -->
-	<section id="news" class="s-dance-news">
-		<div class="container">
-			<span class="dance-slogan">SPADE</span>
-			<h2 class="dance-title">Statistics</h2>
-			<div class="row">
-				
-			</div>
+	<section class="counters" id="Statistics">
+	<div class="text-center">
+	<span class="dance-slogan" style="color: white; padding-bottom: 3vh; font-size:3vh" >SPADE</span> </div>
+  </style>
+		<h1 style="text-align: center; color: white; padding: bottom; font-size:5vh ;">Statistics</h1>
+		<div class="containerpartner">
+		  <div>
+			<div class="counter" data-target="600" style="color: white;" >0</div>
+			<h3 style="color: white;">Event</h3>
+		  </div>
+		  <div>
+			<div class="counter" data-target="250" style="color: white;">0</div>
+			<h3 style="color: white;">Teams</h3>
+		  </div>
+		  <div>
+			<div class="counter" data-target="900" style="color: white;">0</div>
+			<h3 style="color: white;">Speakers</h3>
+		  </div>
+		  <div>
+			<div class="counter" data-target="750" style="color: white;">0</div>
+			<h3 style="color: white;">Viewers</h3>
+		  </div>
 		</div>
-	</section>
+		<script>
+		  const counters = document.querySelectorAll(".counter");
+  
+		  counters.forEach((counter) => {
+			const updateCount = () => {
+			  const target = +counter.getAttribute("data-target");
+			  const count = +counter.innerText;
+  
+			  const inc = 1;
+			  if (count < target) {
+				counter.innerText = count + inc;
+				setTimeout(updateCount, 1);
+			  } else {
+				counter.innerText = target;
+			  }
+			};
+  
+			updateCount();
+		  });
+		</script>
+		</div>
+		</div>
+	  </section>
+   
 	<!-- ============= S-DANCE-PRICE END ============= -->
 
 	<!--=================== S-CLIENTS ===================-->
@@ -685,6 +726,8 @@
 	<!--================ POPUP VIDEO END ================-->
 
 	<!--=================== SCRIPT	===================-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
 	<script src="assets/js/rx-lazy.js"></script>
