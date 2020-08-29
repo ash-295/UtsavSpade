@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'Playfair Display', serif;
+	src: url('.assets/fonts/PlayfairDisplay-VariableFont_wght.ttf');
+  }
+      .containerpartner {
+        max-width: 1100px;
+        margin: 0 auto;
+        overflow: auto;
+      }
+      
+      .counters {
+        margin-top: 0%;
+        background: rgba(12,3,42,0.8);
+        color: #000000;
+        padding: 30px 20px;
+      }
+      
+      .counters .containerpartner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30vh;
+        text-align: center;
+        background: rgba(12,3,42,0.8);
+      }
+      
+      .counters i {
+        color: lightskyblue#;
+        margin-bottom: 5px;
+      }
+      
+      .counters .counter {
+        font-size: 45px;
+        margin: 10px 0;
+      }
+      @media (max-width: 700px) {
+  .counters .containerpartner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .counters .containerpartner > div:nth-of-type(1),
+  .counters .containerpartner > div:nth-of-type(2),
+  .counters .containerpartner > div:nth-of-type(3),
+  .counters .containerpartner > div:nth-of-type(4) {
+    border-bottom: 1px lightskyblue solid;
+    padding-bottom: 20px;
+  }
+}
