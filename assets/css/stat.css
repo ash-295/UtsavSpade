@@ -10,7 +10,8 @@
 	src: url('.assets/fonts/PlayfairDisplay-VariableFont_wght.ttf');
   }
       .containerpartner {
-        margin: 0 auto;
+        padding: 10px;
+        margin: 10px;
         overflow: auto;
       }
       
@@ -27,7 +28,7 @@
       .counters .containerpartner {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 30vh;
+        grid-gap: 20vh;
         text-align: center;
         background: rgba(12,3,42,0.8);
       }
